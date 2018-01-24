@@ -1,0 +1,6 @@
+framework module Pods_StoreListing {
+  umbrella header "Pods-StoreListing-umbrella.h"
+
+  export *
+  module * { export * }
+}
