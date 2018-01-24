@@ -9,7 +9,7 @@
 import UIKit
 
 class AppDetailsViewController: UIViewController {
-
+    
     @IBOutlet var appCategory: UILabel!
     @IBOutlet var appName: UILabel!
     @IBOutlet var appPrice: UILabel!
@@ -21,15 +21,16 @@ class AppDetailsViewController: UIViewController {
         super.viewDidLoad()
         appCategory.text = appInformation?.category
         appName.text = appInformation?.name
-        appPrice.text = appInformation?.price
+        appPrice.text = "\((appInformation?.price as! NSString).floatValue)"
         appDescription.text = appInformation?.appDescription
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
 }
+
